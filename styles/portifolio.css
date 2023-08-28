@@ -24,3 +24,9 @@
     background-color: #FAA613;
     cursor: pointer;
 }
+
+@media (max-width: 800px) {
+    .portifolio_body {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    }

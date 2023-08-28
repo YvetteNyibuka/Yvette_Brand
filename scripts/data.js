@@ -54,3 +54,13 @@ for (let i = 0; i < blogs.length; i++) {
   `
     blogCard.innerHTML += blogData
 }
+
+document.getElementById('burger-button').addEventListener('click', function() {
+    document.body.classList.toggle('show-menu');
+});
+
+document.querySelectorAll('.test a').forEach(function(link) {
+    link.addEventListener('click', function() {
+        document.body.classList.remove('show-menu');
+    });
+});

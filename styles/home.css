@@ -48,3 +48,29 @@
     margin-top: 5.6rem;
     font-size: 1rem;
 }
+
+
+@media (min-width: 360px) and (max-width: 800px) {
+
+    .home {
+    background-image: url('../img/phone2.jpg');
+    color: rgb(6, 111, 186);
+    }
+ 
+    .container_about{ 
+      flex-direction: column;
+      padding: 2rem;
+      width: 90%;
+
+      background-color: chocolate;
+
+    }
+    .desc_about{ 
+  width: 90%;
+    }
+    .pict_left{ 
+        width: fit-content;
+        height:0%;
+    }
+
+    }
