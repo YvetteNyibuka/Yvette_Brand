@@ -1,0 +1,26 @@
+.portifolio_title {
+    padding: .5rem 0;
+    font-size: 2rem;
+}
+
+.portifolio_body {
+    background-color: white;
+    height: fit-content;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    width: 100%;
+    padding: 0 2rem;
+
+}
+
+.component {
+    height: 15rem;
+    display: flex;
+    border: 1px solid black;
+}
+
+.component:hover {
+    background-color: #FAA613;
+    cursor: pointer;
+}
