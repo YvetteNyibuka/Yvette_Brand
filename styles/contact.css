@@ -2,11 +2,14 @@
 display: flex;
 width: 100%;
 border: 2px solid gray;
+background-color: #FAA613;
+
 }
 .contact_form{
     width: 50%;
     height: fit-content;
     display: flex;
+    background-color: white;
 }
 .contact_info{
     width: 50%;
@@ -66,9 +69,8 @@ label{
     flex-direction: column; 
     margin: auto; 
     height: 20%; 
-    margin-top: 1rem;
+    margin-top: 3rem;
     font-size: 1rem;
-    border: 1px solid #FAA613;
 }
 footer{
     display: flex;
