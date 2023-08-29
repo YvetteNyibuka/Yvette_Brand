@@ -80,8 +80,8 @@ footer{
     background-color: grey;
 }
 
-@media (max-width: 800px) {
-.contact_body{
+@media (min-width: 360px) and (max-width: 800px) {
+    .contact_body{
      flex-direction: column;
     }
     .contact_form{
@@ -89,5 +89,22 @@ footer{
     }
     .contact_info{
         width: 100%;
+    }
+
+    footer{
+        flex-direction: column;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .contact_body{
+        display: flex;
+        flex-direction: row;
+       }
+       .info1{
+        height: 25%;
+    }
+    footer{
+        flex-direction: row;
     }
 }

@@ -57,10 +57,20 @@ for (let i = 0; i < blogs.length; i++) {
 
 document.getElementById('burger-button').addEventListener('click', function() {
     document.body.classList.toggle('show-menu');
+    const burgerIcon = document.getElementById('burger-icon');
+    const closeIcon = document.getElementById('close-icon');
+    
+    burgerIcon.style.display = (document.body.classList.contains('show-menu')) ? 'none' : 'block';
+    closeIcon.style.display = (document.body.classList.contains('show-menu')) ? 'block' : 'none';
 });
 
 document.querySelectorAll('.test a').forEach(function(link) {
     link.addEventListener('click', function() {
         document.body.classList.remove('show-menu');
+        const burgerIcon = document.getElementById('burger-icon');
+        const closeIcon = document.getElementById('close-icon');
+        
+        burgerIcon.style.display = 'block';
+        closeIcon.style.display = 'none';
     });
 });

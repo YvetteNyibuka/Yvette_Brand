@@ -137,7 +137,12 @@ li a{
 }
 
 /* Media query for small devices */
-@media (max-width: 800px) {
+@media (min-width: 360px) and (max-width: 800px) {
+    #close-icon {
+                 display: none;
+      }
+
+
     .content {
         width: 100%;
         margin-left: 0%;
@@ -149,9 +154,13 @@ li a{
         right: 2rem;
         z-index: 100;
     }
+    .fa-solid{
+        font-size: 2rem;
+    }
     .burger {
         display: block;
     }
+
 
     /* Show the header menu when burger button is clicked */
     .show-menu .header {
@@ -179,3 +188,8 @@ li a{
         right: 0; /* Slide the menu into view */
     }
 }
+
+@media (min-width: 360px) and (max-width: 800px) {
+    
+}
+
