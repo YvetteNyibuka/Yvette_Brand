@@ -48,7 +48,7 @@ function readIdFromUrl() {
       </p>
 
   </div>
-  <button id="btn_back"><a href="../../index.html#blog">Back</a></button>`
+  <button id="btn_back"><a href="../../index.html#blog" class= "btnb">Back</a></button>`
     } else {
         console.log('Blog not found');
     }
