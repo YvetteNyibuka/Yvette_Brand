@@ -171,6 +171,15 @@ li a{
     .burger {
         display: block;
     }
+    li a{
+        font-weight: bolder;
+        font-size: 1.5rem;
+    
+    }
+    .names{
+        font-weight: bolder;
+        font-size: 1.5rem;
+    }
 
 
     /* Show the header menu when burger button is clicked */
@@ -184,7 +193,7 @@ li a{
         z-index: 99;
         padding-top: 2rem;
         padding-bottom: 2rem;
-        padding-left: 2rem;
+        padding-left: 0;
         padding-right: 2rem;
         justify-content: space-between;
         align-items: center;
