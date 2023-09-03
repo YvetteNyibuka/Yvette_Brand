@@ -1,0 +1,120 @@
+
+.logo {
+    text-align: start;
+    margin-top: 2rem;
+    margin-left: 2rem;
+}
+
+#logo-link {
+    text-decoration: none;
+}
+
+#logo-img {
+    height: 80px;
+    width: 80px;
+}
+
+.login{
+    height: 80vh;
+    width: 60%;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+form{
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+    padding: 1rem;
+    height: fit-content;
+    border: 2px solid #FAA613;
+}
+.input{
+    width: 70%;
+    text-align: start;
+    padding: .7rem 0;
+    margin-top: 2rem;
+    padding-left: 1rem;
+    border-radius: 10px;
+    color: black;
+    font-weight: bold;
+}
+.login_btn{
+    text-align: center; 
+    margin-top: 2rem; 
+    width: 70%; 
+    padding: .7rem 0;
+    color: white;
+    font-size: 1rem;
+    border-radius: 14px;
+    background-color: #FAA613;
+}
+a{
+    color: black;
+    color: darkgreen;
+}
+
+@media screen and (max-width: 800px) {
+    .logo {
+        margin-left: .5rem;
+    }
+    .login{
+        height: 80vh;
+        width: 90%;
+    }
+
+    form{
+        width: 100%;
+        height: fit-content;
+    }
+    .input{
+        width: 90%;
+    }.login_btn{
+        width: 90%; 
+        font-size: 1rem;
+
+    }
+    a{
+        color: darkgreen;
+    }
+
+}
+
+@media(min-width: 768px) and (max-width: 1024px) {
+    .logo {
+        margin-left: 6rem;
+    }
+    .login{
+        height: 80vh;
+        width: 90%;
+    }
+
+    form{
+        width: 80%;
+        height: fit-content;
+    }
+    .input{
+        width: 90%;
+        padding: 1rem 0;
+        padding-left: 1rem;
+        font-size: 1.5rem;
+    }
+    .login_btn{
+        width: 90%; 
+        padding: 1rem 0;
+        font-size: 2rem;
+
+    }
+    a{
+        color: darkgreen;
+        font-size: 1.7rem;
+    }
+    #logo-img {
+        height: 100px;
+        width: 100px;
+    }
+    
+}

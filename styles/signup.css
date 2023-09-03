@@ -1,0 +1,101 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.logo {
+    text-align: start;
+    margin-top: 2rem;
+    margin-left: 2rem;
+}
+
+#logo-link {
+    text-decoration: none;
+}
+
+#logo-img {
+    height: 80px;
+    width: 80px;
+}
+
+.signup {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+form {
+    display: inline-block;
+    text-align: left;
+    width: 60%;
+    max-width: 400px;
+    border: 2px solid #FAA613;
+    padding: 1rem;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+span{
+    color: red;
+    font-size: .7rem;
+}
+.in {
+    width: 90%;
+    padding: 0.5rem;
+    margin-top: 1rem;
+    border-radius: 5px;
+    color: black;
+    font-weight: bold;
+    border: 1px solid #333333;
+}
+
+.btn_signup {
+    text-align: center;
+    margin-top: 1rem;
+    width: 90%;
+    color: white;
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    border-radius: 14px;
+    background-color: #FAA613;
+    cursor: pointer;
+    border: none;
+}
+
+a {
+    color: darkgreen;
+    display: block;
+    margin-top: 1rem;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 800px) {
+    form {
+        width: 80%;
+    }
+    
+    .in, .btn_signup {
+        width: 100%;
+    }
+    .in {
+        width: 80%;
+    }
+    .btn_signup {
+        width: 87%;
+    }
+}
+
+@media(min-width: 768px) and (max-width: 1024px) {
+    form {
+        width: 100%;
+    }
+    
+    .in {
+        width: 90%;
+        padding: 1rem;
+    }
+    .btn_signup {
+        width: 97%;
+        padding: 1rem;
+    }
+}
