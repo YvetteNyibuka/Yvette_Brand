@@ -1,0 +1,41 @@
+
+.dashboards_containers{
+    height: 100vh;
+    width: 100%;
+    background-color: lightgray;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#statistics{
+    height: 70%;
+    gap: 2rem;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    background-color: #FAA613;
+    margin-left: 10%;
+    margin-right: 5%;
+}
+
+/*responsiveness*/
+
+@media only screen and (max-width: 800px) {
+    .dashboards_containers{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    #statistics{
+        height: 90%;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .dashboards_containers{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

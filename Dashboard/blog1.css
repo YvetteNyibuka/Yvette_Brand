@@ -1,0 +1,105 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff; /* White background */
+    color: #000; /* Black text color */
+}
+
+.containerb {
+    background-color: lightgray;
+    padding: 1rem 3rem 1rem 1rem;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+#titlee{
+    color: #FAA613; /* Accent color */
+}
+
+.label{
+    font-size: 1rem;
+}
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Style the form elements */
+label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+input[type="text"],
+textarea,
+input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Style the buttons */
+button[type="button"] {
+    background-color: #FAA613; /* Accent color */
+    color: #fff; /* White text color */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button[type="button"]:hover {
+    background-color: #D88D0B; /* Slightly darker accent color on hover */
+}
+
+/* Style the table */
+table {
+    width: 20%;
+    border-collapse: collapse;
+    overflow-x: auto;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #FAA613; /* Accent color */
+    color: #fff; /* White text color */
+}
+form{
+    width: 60%;
+    margin-left: 20%;
+    margin-top: 3rem;
+    text-align: start;
+    font-size: 3rem;
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 10px;
+    }
+
+    input[type="text"],
+    textarea,
+    input[type="file"] {
+        margin-bottom: 10px;
+    }
+
+    button[type="button"] {
+        font-size: 14px;
+    }
+}

@@ -6,6 +6,10 @@ border: 2px solid gray;
 background-color: #FAA613;
 
 }
+.error{
+    color:red;
+    font-size: .7rem;
+}
 .contact_form{
     width: 50%;
     height: fit-content;
@@ -32,7 +36,7 @@ label{
     float: left;
     padding-bottom: 10px;
 }
-#input{
+.input{
     width: 100%; 
     padding: .8rem 1rem;
     border: 1.3px solid #FAA613;
