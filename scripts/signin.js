@@ -20,20 +20,29 @@ document.addEventListener("DOMContentLoaded", function () {
         if (!emailPattern.test(loginEmail)) {
             loginEmailError.textContent = "Please enter a valid email address.";
             return;
-        }
-
-       else if (loginPassword.length < 6) {
+        } else if (loginPassword.length < 6) {
             loginPasswordError.textContent = "Password must be at least 6 characters.";
             return;
-        }
+        } else {
+            const userCredentials = JSON.parse(localStorage.getItem('userData')) || [];
 
-        else{
-            loginForm.submit();
-            return;
-            
-        }
+            let isAuthenticated = false;
+            for (let i = 0; i < userCredentials.length; i++) {
+                if (loginEmail === userCredentials[i].email && loginPassword === userCredentials[i].password) {
+                    isAuthenticated = true;
+                    break;
+                }
+            }
 
-        // If you want to submit the form, you can uncomment the following line
-        // loginForm.submit();
+            if (isAuthenticated) {
+                if(loginEmail === 'izanyibukayvette@gmail.com') {
+                window.location.href = "../Dashboard/index1.html";
+                } else {
+                    window.location.href = "../index.html";
+                }
+            } else {
+                loginEmailError.textContent = "Invalid email or password.";
+            }
+        }
     });
 });

@@ -13,7 +13,9 @@
     height: 80px;
     width: 80px;
 }
-
+ span{
+    color: red;
+ }
 .login{
     height: 80vh;
     width: 60%;

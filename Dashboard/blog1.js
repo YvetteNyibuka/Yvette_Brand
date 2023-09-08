@@ -1,8 +1,9 @@
 const publishedBlogs = JSON.parse(localStorage.getItem('publishedBlogs')) || [];
+console.log(publishedBlogs);
 let editingIndex = null;
 
 function savePublishedBlogsToLocalStorage() {
-    localStorage.setItem('publishedBlogs', JSON.stringify(publishedBlogs));
+    localStorage.setItem('publishedBlogs', JSON.stringify(publishedBlogs))||[];
 }
 
 function renderPublishedBlogs() {
@@ -26,11 +27,10 @@ function renderPublishedBlogs() {
     });
 }
 
-// Load and render existing blogs from local storage when the DOM content is fully loaded.
 document.addEventListener('DOMContentLoaded', () => {
     renderPublishedBlogs();
 });
-
+renderPublishedBlogs()
 function addBlog() {
     const blogid = document.getElementById('blogid').value;
     const author = document.getElementById('author').value;
@@ -56,7 +56,7 @@ function addBlog() {
         savePublishedBlogsToLocalStorage(); // Save the updated data to local storage
     }
 }
-
+renderPublishedBlogs()
 // Rest of your functions (editBlog, updateBlog, cancelEdit, deleteBlog) remain unchanged.
 
 function editBlog(index) {

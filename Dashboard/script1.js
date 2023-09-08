@@ -72,6 +72,26 @@ var blogs_sections = `
     </form>
 </div>`;
 
+
+// messages crud
+const messageData = JSON.parse(localStorage.getItem('contactFormData')) || [];
+
+let messgess_header = []
+for(let i = 0; i < messageData.length; i++){
+    messgess_header += `<tbody>
+    <tr>
+        <td>${i+1}</td>
+        <td>${messageData[i].name}</td>
+        <td>${messageData[i].email}</td>
+        <td>${messageData[i].message}</td>
+    </tr>
+  
+    </tbody>`
+
+}
+
+
+
 let messages_sections= `
 <div class="messages_containers">
 <h2>Received Messages</h2>
@@ -84,25 +104,30 @@ let messages_sections= `
             <th>Message</th>
         </tr>
     </thead>
-    <tbody>
-        <!-- Sample Message Rows (Add more rows as needed) -->
-        <tr>
-            <td>1</td>
-            <td>John Doe</td>
-            <td>johndoe@example.com</td>
-            <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
-        </tr>
-        <tr>
-            <td>2</td>
-            <td>Jane Smith</td>
-            <td>janesmith@example.com</td>
-            <td>Nulla ac ligula ac justo suscipit tristique.</td>
-        </tr>
-        <!-- Add more message rows here -->
-    </tbody>
+    ${messgess_header}
 </table>
 </div>
     `
+
+
+    // users crud
+
+const users = JSON.parse(localStorage.getItem('userData')) || [];
+let tablebody =[]
+  for(let i = 0; i < users.length; i++){
+    tablebody  += ` <tbody>
+    <!-- Sample User List Item -->
+    <tr class="user-item">
+        <td>${i+1}</td>
+        <td>${users[i].names}</td>
+        <td>${users[i].email}</td>
+    </tr>
+    <!-- Add more user items here -->
+    </tbody>`
+  }
+ 
+
+      
 let users_sections = `<div class="containers_users">
 <h2>Registered Users</h2>
 <table>
@@ -113,15 +138,9 @@ let users_sections = `<div class="containers_users">
             <th>Email</th>
         </tr>
     </thead>
-    <tbody>
-        <!-- Sample User List Item -->
-        <tr class="user-item">
-            <td>1</td>
-            <td>User 1</td>
-            <td>user1@example.com</td>
-        </tr>
-        <!-- Add more user items here -->
-    </tbody>
+
+    ${tablebody}
+   
 </table>
 </div>`;
 
