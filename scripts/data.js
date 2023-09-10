@@ -1,46 +1,47 @@
-var blogs = [
-    {
-        id: 1,
-        image: 'https://picsum.photos/200/300',
-        title: 'Blog 1',
-        content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quod, quaerat, quibusdam, doloremque, nobis, quasi, quidem, doloremque, nobis, quasi.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quod, quaerat, quibusdam, doloremque, nobis, quasi, quidem, doloremque, nobis, quasi.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quod, quaerat, quibusdam, doloremque, nobis, quasi, quidem, doloremque, nobis, quasi.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quod, quaerat, quibusdam, doloremque, nobis, quasi, quidem, doloremque, nobis, quasi.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quod, quaerat, quibusdam, doloremque, nobis, quasi, quidem, doloremque, nobis, quasi.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quod, quaerat, quibusdam, doloremque, nobis, quasi, quidem, doloremque, nobis, quasi.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quod, quaerat, quibusdam, doloremque, nobis, quasi, quidem, doloremque, nobis, quasi.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quod, quaerat, quibusdam, doloremque, nobis, quasi, quidem, doloremque, nobis, quasi.'
-    },
-    {
-        id: 2,
-        image: 'https://picsum.photos/200/300?grayscale',
-        title: 'Blog 2',
-        content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quod, quaerat, quibusdam, doloremque, nobis, quasi, quidem, doloremque, nobis, quasi.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quod, quaerat, quibusdam, doloremque, nobis, quasi, quidem, doloremque, nobis, quasi.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quod, quaerat, quibusdam, doloremque, nobis, quasi, quidem, doloremque, nobis, quasi.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quod, quaerat, quibusdam, doloremque, nobis, quasi, quidem, doloremque, nobis, quasi.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quod, quaerat, quibusdam, doloremque, nobis, quasi, quidem, doloremque, nobis, quasi.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quod, quaerat, quibusdam, doloremque, nobis, quasi, quidem, doloremque, nobis, quasi.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quod, quaerat, quibusdam, doloremque, nobis, quasi, quidem, doloremque, nobis, quasi.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quod, quaerat, quibusdam, doloremque, nobis, quasi, quidem, doloremque, nobis, quasi.'
-    },
-    {
-        id: 3,
-        image: 'https://picsum.photos/seed/picsum/200/300',
-        title: 'Blog 3',
-        content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quod, quaerat, quibusdam, doloremque, nobis, quasi, quidem, doloremque, nobis, quasi.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quod, quaerat, quibusdam, doloremque, nobis, quasi, quidem, doloremque, nobis, quasi.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quod, quaerat, quibusdam, doloremque, nobis, quasi, quidem, doloremque, nobis, quasi.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quod, quaerat, quibusdam, doloremque, nobis, quasi, quidem, doloremque, nobis, quasi.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quod, quaerat, quibusdam, doloremque, nobis, quasi, quidem, doloremque, nobis, quasi.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quod, quaerat, quibusdam, doloremque, nobis, quasi, quidem, doloremque, nobis, quasi.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quod, quaerat, quibusdam, doloremque, nobis, quasi, quidem, doloremque, nobis, quasi.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quod, quaerat, quibusdam, doloremque, nobis, quasi, quidem, doloremque, nobis, quasi.'
-    },
-    {
-        id: 4,
-        image: 'https://picsum.photos/seed/picsum/200/300',
-        title: 'Blog 4',
-        content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quod, quaerat, quibusdam, doloremque, nobis, quasi, quidem, doloremque, nobis, quasi.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quod, quaerat, quibusdam, doloremque, nobis, quasi, quidem, doloremque, nobis, quasi.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quod, quaerat, quibusdam, doloremque, nobis, quasi, quidem, doloremque, nobis, quasi.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quod, quaerat, quibusdam, doloremque, nobis, quasi, quidem, doloremque, nobis, quasi.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quod, quaerat, quibusdam, doloremque, nobis, quasi, quidem, doloremque, nobis, quasi.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quod, quaerat, quibusdam, doloremque, nobis, quasi, quidem, doloremque, nobis, quasi.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quod, quaerat, quibusdam, doloremque, nobis, quasi, quidem, doloremque, nobis, quasi.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quod, quaerat, quibusdam, doloremque, nobis, quasi, quidem, doloremque, nobis, quasi.'
-    },
-    {
-        id: 5,
-        image: 'https://picsum.photos/seed/picsum/200/300',
-        title: 'Blog 5',
-        content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quod, quaerat, quibusdam, doloremque, nobis, quasi, quidem, doloremque, nobis, quasi. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quod, quaerat, quibusdam, doloremque, nobis, quasi, quidem, doloremque, nobis, quasi.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quod, quaerat, quibusdam, doloremque, nobis, quasi, quidem, doloremque, nobis, quasi.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quod, quaerat, quibusdam, doloremque, nobis, quasi, quidem, doloremque, nobis, quasi.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quod, quaerat, quibusdam, doloremque, nobis, quasi, quidem, doloremque, nobis, quasi.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quod, quaerat, quibusdam, doloremque, nobis, quasi, quidem, doloremque, nobis, quasi.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quod, quaerat, quibusdam, doloremque, nobis, quasi, quidem, doloremque, nobis, quasi.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quod, quaerat, quibusdam, doloremque, nobis, quasi, quidem, doloremque, nobis, quasi.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quod, quaerat, quibusdam, doloremque, nobis, quasi, quidem, doloremque, nobis, quasi.'
-    },
-    {
-        id: 6,
-        image: 'https://picsum.photos/seed/picsum/200/300',
-        title: 'Blog 6',
-        content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quod, quaerat, quibusdam, doloremque, nobis, quasi, quidem, doloremque, nobis, quasi.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quod, quaerat, quibusdam, doloremque, nobis, quasi, quidem, doloremque, nobis, quasi.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quod, quaerat, quibusdam, doloremque, nobis, quasi, quidem, doloremque, nobis, quasi.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quod, quaerat, quibusdam, doloremque, nobis, quasi, quidem, doloremque, nobis, quasi.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quod, quaerat, quibusdam, doloremque, nobis, quasi, quidem, doloremque, nobis, quasi.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quod, quaerat, quibusdam, doloremque, nobis, quasi, quidem, doloremque, nobis, quasi.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quod, quaerat, quibusdam, doloremque, nobis, quasi, quidem, doloremque, nobis, quasi.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quod, quaerat, quibusdam, doloremque, nobis, quasi, quidem, doloremque, nobis, quasi.'
-    }
-];
+// var blog = [
+//     {
+//         id: 1,
+//         image: 'https://picsum.photos/200/300',
+//         title: 'Blog 1',
+//         content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quod, quaerat, quibusdam, doloremque, nobis, quasi, quidem, doloremque, nobis, quasi.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quod, quaerat, quibusdam, doloremque, nobis, quasi, quidem, doloremque, nobis, quasi.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quod, quaerat, quibusdam, doloremque, nobis, quasi, quidem, doloremque, nobis, quasi.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quod, quaerat, quibusdam, doloremque, nobis, quasi, quidem, doloremque, nobis, quasi.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quod, quaerat, quibusdam, doloremque, nobis, quasi, quidem, doloremque, nobis, quasi.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quod, quaerat, quibusdam, doloremque, nobis, quasi, quidem, doloremque, nobis, quasi.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quod, quaerat, quibusdam, doloremque, nobis, quasi, quidem, doloremque, nobis, quasi.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quod, quaerat, quibusdam, doloremque, nobis, quasi, quidem, doloremque, nobis, quasi.'
+//     },
+//     {
+//         id: 2,
+//         image: 'https://picsum.photos/200/300?grayscale',
+//         title: 'Blog 2',
+//         content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quod, quaerat, quibusdam, doloremque, nobis, quasi, quidem, doloremque, nobis, quasi.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quod, quaerat, quibusdam, doloremque, nobis, quasi, quidem, doloremque, nobis, quasi.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quod, quaerat, quibusdam, doloremque, nobis, quasi, quidem, doloremque, nobis, quasi.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quod, quaerat, quibusdam, doloremque, nobis, quasi, quidem, doloremque, nobis, quasi.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quod, quaerat, quibusdam, doloremque, nobis, quasi, quidem, doloremque, nobis, quasi.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quod, quaerat, quibusdam, doloremque, nobis, quasi, quidem, doloremque, nobis, quasi.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quod, quaerat, quibusdam, doloremque, nobis, quasi, quidem, doloremque, nobis, quasi.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quod, quaerat, quibusdam, doloremque, nobis, quasi, quidem, doloremque, nobis, quasi.'
+//     },
+//     {
+//         id: 3,
+//         image: 'https://picsum.photos/seed/picsum/200/300',
+//         title: 'Blog 3',
+//         content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quod, quaerat, quibusdam, doloremque, nobis, quasi, quidem, doloremque, nobis, quasi.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quod, quaerat, quibusdam, doloremque, nobis, quasi, quidem, doloremque, nobis, quasi.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quod, quaerat, quibusdam, doloremque, nobis, quasi, quidem, doloremque, nobis, quasi.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quod, quaerat, quibusdam, doloremque, nobis, quasi, quidem, doloremque, nobis, quasi.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quod, quaerat, quibusdam, doloremque, nobis, quasi, quidem, doloremque, nobis, quasi.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quod, quaerat, quibusdam, doloremque, nobis, quasi, quidem, doloremque, nobis, quasi.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quod, quaerat, quibusdam, doloremque, nobis, quasi, quidem, doloremque, nobis, quasi.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quod, quaerat, quibusdam, doloremque, nobis, quasi, quidem, doloremque, nobis, quasi.'
+//     },
+//     {
+//         id: 4,
+//         image: 'https://picsum.photos/seed/picsum/200/300',
+//         title: 'Blog 4',
+//         content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quod, quaerat, quibusdam, doloremque, nobis, quasi, quidem, doloremque, nobis, quasi.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quod, quaerat, quibusdam, doloremque, nobis, quasi, quidem, doloremque, nobis, quasi.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quod, quaerat, quibusdam, doloremque, nobis, quasi, quidem, doloremque, nobis, quasi.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quod, quaerat, quibusdam, doloremque, nobis, quasi, quidem, doloremque, nobis, quasi.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quod, quaerat, quibusdam, doloremque, nobis, quasi, quidem, doloremque, nobis, quasi.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quod, quaerat, quibusdam, doloremque, nobis, quasi, quidem, doloremque, nobis, quasi.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quod, quaerat, quibusdam, doloremque, nobis, quasi, quidem, doloremque, nobis, quasi.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quod, quaerat, quibusdam, doloremque, nobis, quasi, quidem, doloremque, nobis, quasi.'
+//     },
+//     {
+//         id: 5,
+//         image: 'https://picsum.photos/seed/picsum/200/300',
+//         title: 'Blog 5',
+//         content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quod, quaerat, quibusdam, doloremque, nobis, quasi, quidem, doloremque, nobis, quasi. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quod, quaerat, quibusdam, doloremque, nobis, quasi, quidem, doloremque, nobis, quasi.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quod, quaerat, quibusdam, doloremque, nobis, quasi, quidem, doloremque, nobis, quasi.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quod, quaerat, quibusdam, doloremque, nobis, quasi, quidem, doloremque, nobis, quasi.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quod, quaerat, quibusdam, doloremque, nobis, quasi, quidem, doloremque, nobis, quasi.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quod, quaerat, quibusdam, doloremque, nobis, quasi, quidem, doloremque, nobis, quasi.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quod, quaerat, quibusdam, doloremque, nobis, quasi, quidem, doloremque, nobis, quasi.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quod, quaerat, quibusdam, doloremque, nobis, quasi, quidem, doloremque, nobis, quasi.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quod, quaerat, quibusdam, doloremque, nobis, quasi, quidem, doloremque, nobis, quasi.'
+//     },
+//     {
+//         id: 6,
+//         image: 'https://picsum.photos/seed/picsum/200/300',
+//         title: 'Blog 6',
+//         content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quod, quaerat, quibusdam, doloremque, nobis, quasi, quidem, doloremque, nobis, quasi.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quod, quaerat, quibusdam, doloremque, nobis, quasi, quidem, doloremque, nobis, quasi.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quod, quaerat, quibusdam, doloremque, nobis, quasi, quidem, doloremque, nobis, quasi.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quod, quaerat, quibusdam, doloremque, nobis, quasi, quidem, doloremque, nobis, quasi.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quod, quaerat, quibusdam, doloremque, nobis, quasi, quidem, doloremque, nobis, quasi.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quod, quaerat, quibusdam, doloremque, nobis, quasi, quidem, doloremque, nobis, quasi.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quod, quaerat, quibusdam, doloremque, nobis, quasi, quidem, doloremque, nobis, quasi.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quod, quaerat, quibusdam, doloremque, nobis, quasi, quidem, doloremque, nobis, quasi.'
+//     }
+// ];
 
 let blogCard = document.getElementById('blogCard')
+let blogInfo = JSON.parse(localStorage.getItem('publishedBlogs'))|| []
 
-for (let i = 0; i < blogs.length; i++) {
-    let blog = blogs[i]
+for (let i = 0; i < blogInfo.length; i++) {
+    let blog = blogInfo[i]
     let blogData = `  <div class="blog_card">
 <div class="blog_img">
   <img src="${blog.image}" alt="" style="width: 100%;">
@@ -48,7 +49,7 @@ for (let i = 0; i < blogs.length; i++) {
   <div class="blog_titles">${blog.title}</div>
   <div class="blog_desc">${blog.content.substring(0,200)}...</div>
   <div class="btn_readmore">
-  <a href="./pages/blog.html?id=${blog.id}" id="btn-readmore">Readmore</a>
+  <a href="./pages/blog.html?id=${blog.title}" id="btn-readmore">Readmore</a>
   </div>
   </div>
   `

@@ -1,13 +1,16 @@
+// Get blogs from local storage or initialize an empty array
 const publishedBlogs = JSON.parse(localStorage.getItem('publishedBlogs')) || [];
-console.log(publishedBlogs);
+
 let editingIndex = null;
 
+// Function to save blogs to local storage
 function savePublishedBlogsToLocalStorage() {
-    localStorage.setItem('publishedBlogs', JSON.stringify(publishedBlogs))||[];
+    localStorage.setItem('publishedBlogs', JSON.stringify(publishedBlogs));
 }
 
+// Function to render blogs in the blog-list div
 function renderPublishedBlogs() {
-    const blogList = document.querySelector('.blog-list');
+    const blogList = document.getElementById('blog-list');
     blogList.innerHTML = ''; // Clear the existing content
 
     publishedBlogs.forEach((blog, index) => {
@@ -27,38 +30,51 @@ function renderPublishedBlogs() {
     });
 }
 
+// Render blogs when the page loads
 document.addEventListener('DOMContentLoaded', () => {
     renderPublishedBlogs();
 });
-renderPublishedBlogs()
+
+// Function to add a new blog
+
+let nextBlogId = 1;
 function addBlog() {
-    const blogid = document.getElementById('blogid').value;
+    // const blogid = document.getElementById('blogid').value;
     const author = document.getElementById('author').value;
     const title = document.getElementById('title').value;
     const content = document.getElementById('content').value;
     const imageInput = document.getElementById('image');
     const image = imageInput.files[0]; // Get the uploaded image
 
-    if (blogid && author && title && content) {
-        // Assuming image is uploaded to the server and we get a URL for it
-        // In a real application, you would handle image uploads differently
-        const imageUrl = 'https://www.google.com/imgres?imgurl=https%3A%2F%2Fimages04.nicepage.com%2Ffeature%2F583347%2Fblog-category.jpg&tbnid=GvoOL8OT0HQGMM&vet=12ahUKEwjP3OrEsJSBAxWQsScCHaVXD7UQMygBegQIARB2..i&imgrefurl=https%3A%2F%2Fnicepage.com%2Ffeatures%2Fc%2Fblog&docid=0WRGJiknYKTfwM&w=540&h=320&q=blog&ved=2ahUKEwjP3OrEsJSBAxWQsScCHaVXD7UQMygBegQIARB2'; // Replace with the actual image URL or path.
+    if ( author && title && content && image) {
+        const reader = new FileReader();
 
-        publishedBlogs.push({ blogid, author, title, content, image: imageUrl });
-        renderPublishedBlogs(); // Render the updated list with the new blog
+        reader.readAsDataURL(image);
+        const blogid = nextBlogId++;
+        console.log('Generated blogid:', blogid); // Debug: Log the generated blogid
 
-        document.getElementById('blogid').value = '';
-        document.getElementById('author').value = '';
-        document.getElementById('title').value = '';
-        document.getElementById('content').value = '';
-        imageInput.value = ''; // Clear the image input
-
-        savePublishedBlogsToLocalStorage(); // Save the updated data to local storage
+        reader.addEventListener('load', () => {
+            const imageUrl = reader.result;
+            publishedBlogs.push({ blogid, author, title, content, image: imageUrl });
+            savePublishedBlogsToLocalStorage();
+            renderPublishedBlogs();
+            clearForm();
+        });
+    } else {
+        alert('Please fill in all fields and select an image.');
     }
 }
-renderPublishedBlogs()
-// Rest of your functions (editBlog, updateBlog, cancelEdit, deleteBlog) remain unchanged.
 
+// Function to clear the form fields
+function clearForm() {
+    // document.getElementById('blogid').value = '';
+    document.getElementById('author').value = '';
+    document.getElementById('title').value = '';
+    document.getElementById('content').value = '';
+    document.getElementById('image').value = '';
+}
+
+// Function to edit a blog
 function editBlog(index) {
     editingIndex = index;
     const blogToEdit = publishedBlogs[index];
@@ -73,6 +89,7 @@ function editBlog(index) {
     document.querySelector('.edit-blog-form').style.display = 'block';
 }
 
+// Function to update a blog
 function updateBlog() {
     if (editingIndex !== null) {
         const updatedTitle = document.getElementById('editTitle').value;
@@ -83,33 +100,38 @@ function updateBlog() {
             const updatedImage = updatedImageInput.files[0]; // Get the updated image
 
             if (updatedImage) {
-                // Handle the updated image (e.g., upload it to the server)
-                // In a real application, you would handle image uploads differently
-                const updatedImageUrl = 'path-to-updated-image.jpg'; // Replace with the new image URL
+                const reader = new FileReader();
+                reader.readAsDataURL(updatedImage);
 
-                publishedBlogs[editingIndex] = {
-                    ...publishedBlogs[editingIndex],
-                    title: updatedTitle,
-                    content: updatedContent,
-                    image: updatedImageUrl, // Replace the image URL with the new one
-                };
+                reader.addEventListener('load', () => {
+                    const updatedImageUrl = reader.result;
+                    publishedBlogs[editingIndex] = {
+                        ...publishedBlogs[editingIndex],
+                        title: updatedTitle,
+                        content: updatedContent,
+                        image: updatedImageUrl,
+                    };
+
+                    savePublishedBlogsToLocalStorage();
+                    renderPublishedBlogs();
+                    cancelEdit();
+                });
             } else {
-                // If no updated image, retain the previous image
                 publishedBlogs[editingIndex] = {
                     ...publishedBlogs[editingIndex],
                     title: updatedTitle,
                     content: updatedContent,
                 };
-            }
 
-            renderPublishedBlogs();
-            cancelEdit();
-            savePublishedBlogsToLocalStorage(); // Save the updated data to local storage
+                savePublishedBlogsToLocalStorage();
+                renderPublishedBlogs();
+                cancelEdit();
+            }
         }
     }
 }
 
-
+// Function to cancel the edit mode
 function cancelEdit() {
     editingIndex = null;
     document.querySelector('.edit-blog-form').style.display = 'none';
@@ -118,12 +140,13 @@ function cancelEdit() {
     document.getElementById('editImage').value = '';
 }
 
+// Function to delete a blog
 function deleteBlog(index) {
     const confirmDelete = confirm('Are you sure you want to delete this blog?');
 
     if (confirmDelete) {
         publishedBlogs.splice(index, 1);
+        savePublishedBlogsToLocalStorage();
         renderPublishedBlogs();
-        savePublishedBlogsToLocalStorage(); // Save the updated data to local storage
     }
 }

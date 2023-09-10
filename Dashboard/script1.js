@@ -27,6 +27,40 @@ let dasshboards_sections = `<div class="dashboards_containers">
 </div>
 </div>`;
 
+
+const blogData = JSON.parse(localStorage.getItem('publishedBlogs')) || [];
+
+console.log("bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb", blogData);
+let blog_header = []
+function getBlogHeader() {
+for(let i = 0; i < blogData.length; i++){
+    blog_header += `<tbody>
+   
+    <td>${i+1}</td>
+    <td>${blogData[i].author}</td>
+    <td>${blogData[i].title}</td>
+    <td>${blogData[i].content}</td>
+    <td><img src="${blogData[i].image}" alt="${blogData[i].title}" style="max-width: 100px;"></td>
+    <td>
+        <button class="delete" onclick="deleteBlog(${blogData[i].blogid})">Delete</button>
+    </td>
+    </tbody>`
+
+}
+return blog_header
+}
+
+function deleteBlog(index) {
+    const confirmDelete = confirm('Are you sure you want to delete this blog?');
+
+    if (confirmDelete) {
+        publishedBlogs.splice(index, 1);
+        savePublishedBlogsToLocalStorage();
+        renderPublishedBlogs();
+    }
+    getBlogHeader()
+}
+
 var blogs_sections = `
 <div class="containerb" style="background-color: lightgray; width: 100%;">
     <div style="overflow-x: auto;">
@@ -41,14 +75,12 @@ var blogs_sections = `
                     <th id="cap">Actions</th>
                 </tr>
             </thead>
-            <tbody class="blog-list">
-                <!-- Blog items will be added here dynamically -->
-            </tbody>
+            <tbody id="blog-list">
+                       
+             </tbody>
         </table>
     </div>
     <form class="add-blog-form">
-        <label for="blogid" class="label">Blog ID:</label>
-        <input type="text" id="blogid" name="blogid" required>
         <label for="author" class="label">Author:</label>
         <input type="text" id="author" name="author" required>
         <label for="title" class="label">Title:</label>

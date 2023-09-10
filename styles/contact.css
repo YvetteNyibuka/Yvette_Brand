@@ -2,8 +2,8 @@
 .contact_body{
 display: flex;
 width: 100%;
-border: 2px solid gray;
-background-color: #FAA613;
+border: 7px solid white;
+
 
 }
 .error{
@@ -63,7 +63,7 @@ label{
     border: 1px solid black;
     border-radius: 10px;
     background-color: #FAA613;
-    box-shadow: 0px 0px 10px grey;
+    box-shadow: 0px 0px 10px;
 
 }
 .info1{

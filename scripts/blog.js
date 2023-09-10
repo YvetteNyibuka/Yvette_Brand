@@ -1,38 +1,14 @@
-// blog.js
-// const urlParams = new URLSearchParams(window.location.search);
-// const blogId = parseInt(urlParams.get('id'));
-// const blog = blogs.find(blog => blog.id === blogId);
-  
-// document.addEventListener("DOMContentLoaded", function () {
-//     let bogdatas;
-//     let blog_card = document.getElementById('blogss');
- 
-//   console.log(blog);
-//     if (blog) {
-//       bogdatas = `
-//         <div class="blog_title">${blog.title}</div>
-//         <div class="blog_img"><img src="${blog.image}" alt="${blog.title}" style="width: 100%;"></div>
-//         <div class="author">Author: Your Name</div>
-//         <div class="blog_desc">${blog.content}</div>`;
-  
-//       blog_card.innerHTML = bogdatas;
-//     } else {
-//       blog_card.innerHTML = "Blog not found";
-//     }
-//   });
-
-// let blogCard = document.getElementById('blogss');
-
-// // blogCard.addEventListener('click', readIdFromUrl);
-
-
 
 let bogdata
 let blog_card = document.getElementById('blogss')
+let blogInfo = JSON.parse(localStorage.getItem('publishedBlogs'))|| []
+
 function readIdFromUrl() {
     const urlParams = new URLSearchParams(window.location.search);
-    const blogId = parseInt(urlParams.get('id'));
-    const blog = blogs.find(blog => blog.id === blogId);
+    const blogId = urlParams.get('id');
+    const blog = blogInfo.find(blog => blog.title === blogId);
+    console.log(blog);
+
     if (blog) {
       bogdata = ` <div class="blog_title">
       <p style="padding: 1rem;">${blog.title}</p>

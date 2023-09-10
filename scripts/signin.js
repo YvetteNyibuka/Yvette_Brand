@@ -35,11 +35,8 @@ document.addEventListener("DOMContentLoaded", function () {
             }
 
             if (isAuthenticated) {
-                if(loginEmail === 'izanyibukayvette@gmail.com') {
                 window.location.href = "../Dashboard/index1.html";
-                } else {
-                    window.location.href = "../index.html";
-                }
+                
             } else {
                 loginEmailError.textContent = "Invalid email or password.";
             }
